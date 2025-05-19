@@ -1,0 +1,94 @@
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #eee;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #00ffe7;
+    text-shadow: 0 0 8px #00ffe7;
+  }
+
+  .task-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .task-card {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 25px;
+    width: 220px;
+    box-shadow: 0 0 10px #00ffe7;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .task-card:hover {
+    box-shadow: 0 0 25px #00ffe7;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .task-card h3 {
+    color: #00ffe7;
+    margin-bottom: 10px;
+  }
+
+  .task-card p {
+    color: #bbb;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .task-card a {
+    color: #00ffe7;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #00ffe7;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .task-card a:hover {
+    background-color: #00ffe7;
+    color: #121212;
+  }
+</style>
+
+<h1>Welcome to My Dark Tasks</h1>
+<div class="task-container">
+  <div class="task-card">
+    <h3>Task 1: Addition</h3>
+    <p>Simple addition calculator</p>
+    <a href="task1.html">Go to Task 1</a>
+  </div>
+  <div class="task-card">
+    <h3>Task 2: Temperature Converter</h3>
+    <p>Convert Fahrenheit to Celsius</p>
+    <a href="task2.html">Go to Task 2</a>
+  </div>
+  <div class="task-card">
+    <h3>Task 3: Counter</h3>
+    <p>Start/Stop/Reset counter</p>
+    <a href="task3.html">Go to Task 3</a>
+  </div>
+  <div class="task-card">
+    <h3>Task 4: Calculator</h3>
+    <p>Advanced calculator with all operations</p>
+    <a href="task4.html">Go to Task 4</a>
+  </div>
+</div>
+
+

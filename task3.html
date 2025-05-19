@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px gray; 
+        }
+
+        #count {
+            font-size: 48px;
+            font-weight: bold;
+            color: limegreen;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: dodgerblue; 
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: royalblue; 
+        }
+
+        button#stop {
+            background-color: orange; 
+        }
+
+        button#stop:hover {
+            background-color: darkorange;
+        }
+
+        button#reset {
+            background-color: red; 
+        }
+
+        button#reset:hover {
+            background-color: darkred; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="count">0</p>
+        <button id="start" onclick="start()">Start</button>
+        <button id="stop" onclick="stop()">Stop</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        let intervalId;
+
+        function start() {
+            if (!intervalId) {
+                intervalId = setInterval(() => {
+                    const countElement = document.getElementById('count');
+                    let val = Number(countElement.textContent);
+                    val++;
+                    countElement.textContent = val;
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        function reset() {
+            clearInterval(intervalId);
+            intervalId = null;
+            document.getElementById('count').textContent = '0';
+        }
+    </script>
+</body>
+</html>
+
